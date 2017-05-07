@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>Testing</title>
+    <style>
+        li {
+            color: red;
+            background-color: rgb(255, 255, 0);
+            text-align: center;
+            font-family: "Arial";
+            font-size: 16px;
+            /*font-weight: bold;
+            font-style: italic;*/
+        }
+        
+        #abc {
+            color: green;
+        }
+        
+        .mno {
+            color: aqua;
+        }
+        
+        .xyz {
+            text-decoration: overline;
+        }
+        
+        #def {
+            text-decoration:line-through;
+        }
+        
+        #welcome {
+            height: 64px;
+            width: calc(100% - 48px);
+            background-color: floralwhite;
+            margin: 8px;
+            position: relative;
+            display: block;
+            padding: 16px;
+        }
+        
+        button {
+            padding: 16px;
+            
+        }
+    </style>
+    
+    <script>
+        function prompts() {
+            var output = "";
+            output = prompt("This is the message for the alert");
+            document.getElementById("welcome").innerHTML = output;
+        }
+        
+        function alerts() {
+            alert("This is the message for the alert");
+        }
+        
+        function hello() {
+//            var input;
+//            input = prompt("Hello");     //Alert for ...
+            var x = 70;
+            var y = 70;
+            if (x > 100) {
+                document.getElementById("welcome").innerHTML = "x is larger than y";
+            }
+            else {
+                document.getElementById("welcome").innerHTML = "x is smaller than y";
+            }
+        }
+        
+        function loopsss1() {
+            var x;
+            var output = 0;
+            for (x = 1; x < 10; x++) {
+                output = output + x;
+            }
+            document.getElementById("welcome").innerHTML = output;
+        }
+        
+        function loopsss2() {
+            var x = 1;
+            var output = 0;
+            while(x < 10) {
+                output = output + x;
+                x++;
+            }
+            document.getElementById("welcome").innerHTML = output;
+        }
+    </script>
+</head>
+<body onload="hello();">
+    <ul>
+        <!--<li>First</li> -->
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth Hello....... <span>This is</span> a test</li>
+        <li>Fifth Hello....... <span id="abc">This is</span> a test</li>
+        <li>Sixth Hello....... <span class="xyz">This is</span> a test</li>
+        
+    </ul>
+    
+    <a href="http://www.google.com" target="_self"><img src="../Tockative/img/table-3.jpg" alt="ABC"/>
+    </a>
+    
+    <div id="welcome"></div>
+        
+    <button onclick="loopsss2();">Button (While-loop)</button>
+    <button onclick="loopsss1();">Button (For-loop)</button>
+    <button onclick="prompts();">Prompt example</button>
+    <button onclick="alerts();">Alert example</button>
+</body>
+</html>
